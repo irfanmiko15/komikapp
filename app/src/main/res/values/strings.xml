@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MangaApp</string>
+    <string name="good_morning">Good Morning</string>
+    <string name="name">Irfan Dary Sujatmiko</string>
+    <string name="all_manga">All Manga</string>
+    <string name="email">irfandarys@gmail.com</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="author">author</string>
+    <string name="manga_title">title</string>
+    <string name="next_chapter">next chapter</string>
+    <string name="views">views</string>
+    <string name="score">score</string>
+    <string name="genre">genre</string>
+    <string name="release">release</string>
+    <string name="sinopsis">sinopsis</string>
+</resources>

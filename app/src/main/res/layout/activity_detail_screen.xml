@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:layout_margin="5dp"
+
+    >
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_image"
+            android:layout_width="170dp"
+            android:layout_height="240dp"
+            card_view:cardCornerRadius="20dp"
+            android:elevation="10dp">
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="170dp"
+                android:layout_height="240dp"
+                android:layout_marginBottom="4dp"
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/avatars" />
+        </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@id/card_image"
+            android:layout_marginHorizontal="10dp"
+            >
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="5dp"
+                android:layout_toEndOf="@id/card_image"
+                android:layout_toRightOf="@id/card_image"
+                android:textSize="20sp"
+                android:fontFamily="@font/nunito_bold"
+                android:textStyle="bold"
+                tools:text="@string/manga_title" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:fontFamily="@font/nunito_bold"
+                android:textSize="16sp"
+                android:text="Author :"
+                />
+            <TextView
+                android:id="@+id/author"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/title"
+                android:layout_marginBottom="5dp"
+
+                android:ellipsize="end"
+                android:maxLines="5"
+                android:fontFamily="@font/nunito_regular"
+                android:textSize="14sp"
+                tools:text="@string/author" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:fontFamily="@font/nunito_bold"
+                android:textSize="16sp"
+                android:text="Genre :"
+                />
+            <TextView
+                android:id="@+id/genre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/nunito_regular"
+                tools:text="@string/genre"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:fontFamily="@font/nunito_bold"
+                android:textSize="16sp"
+                android:text="Chapter :"
+                />
+            <TextView
+                android:id="@+id/chapter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/nunito_regular"
+                tools:text="@string/next_chapter"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:fontFamily="@font/nunito_bold"
+                android:textSize="16sp"
+                android:text="Relase Date :"
+                />
+            <TextView
+                android:id="@+id/release"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitEnd"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito_regular"
+
+                tools:text="@string/release" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/parent_table"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_image"
+            android:orientation="horizontal"
+
+            android:paddingVertical="20dp">
+
+            <LinearLayout
+                android:id="@+id/parent_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center_horizontal"
+
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:paddingRight="5dp"
+                        android:src="@drawable/star" />
+
+                    <TextView
+                        android:id="@+id/score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_bold"
+                        android:maxLines="5"
+                        android:textSize="16sp"
+                        android:layout_gravity="center_vertical"
+
+                        android:gravity="center_vertical"
+                        tools:text="@string/score" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center_horizontal"
+                    android:text="Score"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/parent_views"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/parent_score"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/views"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center_horizontal"
+                    android:textSize="20sp"
+                    tools:text="@string/views" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center_horizontal"
+                    android:text="Total"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/parent_table"
+            >
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitEnd"
+                android:textSize="25sp"
+                android:fontFamily="@font/nunito_bold"
+                android:layout_marginBottom="5dp"
+               android:text="Sinopsis :"/>
+            <TextView
+                android:id="@+id/sinopsis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitEnd"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito_regular"
+
+                android:text="@string/sinopsis" />
+
+            <Button
+                android:id="@+id/action_share"
+                android:layout_marginVertical="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Share" />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</ScrollView>
